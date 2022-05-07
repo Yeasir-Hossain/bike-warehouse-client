@@ -2,7 +2,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
-import PageTitle from '../PageTitle/PageTitle'
 import Loading from '../Loading/Loading';
 import Social from '../Social/Social';
 
@@ -44,7 +43,6 @@ const Register = () => {
 
     return (
         <div className='register-form'>
-            <PageTitle title="Login"></PageTitle>
             <form onSubmit={handleRegister}>
                 <input type="text" name="name" id="" placeholder='Your Name' />
 

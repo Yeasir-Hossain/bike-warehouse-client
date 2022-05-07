@@ -7,7 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import Loading from '../Loading/Loading';
-import PageTitle from '../PageTitle/PageTitle'
 import Social from '../Social/Social';
 
 const Login = () => {
@@ -66,7 +65,6 @@ const Login = () => {
 
     return (
         <div className='container w-50 mx-auto'>
-            <PageTitle title="Login"></PageTitle>
             <h2 className='text-primary text-center mt-2'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
