@@ -1,6 +1,6 @@
 import React from 'react';
-import { Table, Button, Nav } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Table, Button } from 'react-bootstrap';
+import {useNavigate } from 'react-router-dom';
 import { toast, } from 'react-toastify';
 import useBikes from '../../hooks/useBikes';
 
