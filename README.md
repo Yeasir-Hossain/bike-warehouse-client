@@ -1,7 +1,6 @@
-# Website name: Paratronics Warehouse Solutions 
-# ​Live Link: https://paratronics-2213d.web.app 
-  
- ​Description: Paratronics Warehouse Solutions for electronics inventory. Our systematic approach to sourcing, storing, and selling inventory electronics and gadgets. 
+# Website name: BIKE HUB 
+# ​Live Link: https://bike-hub-b9899.web.app/
+
 ## ​Features 
 - ​Responsive 
 - Carousel 
