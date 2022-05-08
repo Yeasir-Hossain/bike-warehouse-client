@@ -6,7 +6,7 @@ import './Inventory.css'
 const Inventory = (props) => {
     const six = props.val
 
-    const [bikes, setBikes] = useBikes(six);
+    const [bikes] = useBikes(six);
 
     return (
         <div id="bikes" className='container mb-2'>
