@@ -20,7 +20,7 @@ const Summary = () => {
         },
       ];
     return (
-        <div>
+        <div id='summary'>
             <div>
                 <h2 className="text-center my-4">
                     SALES SUMMARY
