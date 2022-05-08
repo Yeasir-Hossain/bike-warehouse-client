@@ -59,7 +59,24 @@ const Update = () => {
             )
     }
     return (
-        <div></div>
+        <div>
+            <Container>
+                <Row xs={1} md={2} className='my-5 border p-3 shadow-lg rounded'>
+                    <Col><img src={product.image} className='w-75' alt="" srcset="" /></Col>
+                    <Col style={{ marginTop: '6%' }}> <h2>Updating Product: {product.name}</h2>
+                        <p><strong>Quantity: {qty}</strong></p>
+                        <h5>Brand: {product.supplier_name}</h5>
+                        <h5><strong>Features:</strong><br />{product.description}</h5><br />
+                        <form onSubmit={handleUpdateproduct} style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+
+                            <input type="number" min={1} name='quantity' placeholder='enter quantity' required />
+                            <br />
+                            <Button className='rounded ms-1 pt-1 w-100' variant="dark" size="lg" type="submit">Add to stock</Button>
+                        </form>
+                        <Button className='mx-auto my-2 w-100' variant="success" size="lg" onClick={handleDeliveryproduct}>Delivered</Button></Col>
+                </Row>
+            </Container>
+        </div>
     );
 };
 
