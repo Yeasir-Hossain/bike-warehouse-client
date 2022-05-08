@@ -4,8 +4,13 @@ import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import Loading from '../Loading/Loading';
 import Social from '../Social/Social';
+import { Button, Form } from 'react-bootstrap';
+import { useRef } from 'react';
 
 const Register = () => {
+    const nameRef = useRef('')
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
     const [
         createUserWithEmailAndPassword,
         user,
@@ -30,30 +35,34 @@ const Register = () => {
 
     const handleRegister = async (event) => {
         event.preventDefault();
-        const name = event.target.name.value;
-        const email = event.target.email.value;
-        const password = event.target.password.value;
-        // const agree = event.target.terms.checked;
+        const name = nameRef.current.value;
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
         console.log('Updated profile');
 
     }
+   
 
     return (
-        <div className='register-form'>
-            <form onSubmit={handleRegister}>
-                <input type="text" name="name" id="" placeholder='Your Name' />
-
-                <input type="email" name="email" id="" placeholder='Email Address' required />
-
-                <input type="password" name="password" id="" placeholder='Password' required />
-                <input
-                    className='w-50 mx-auto btn btn-primary mt-2'
-                    type="submit"
-                    value="Register" />
-            </form>
+        <div className='container w-25 mx-auto border-1 shadow-lg my-4'>
+            <h2 className='text-dark text-center my-4'>Please Register</h2>
+            <Form onSubmit={handleRegister}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Control ref={nameRef} type="text" placeholder="Enter name" required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
+                </Form.Group>
+                <Button variant="dark w-50 mx-auto d-block mb-2" type="submit">
+                    Register
+                </Button>
+            </Form>
             <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
             <Social></Social>
         </div>

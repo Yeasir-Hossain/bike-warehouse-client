@@ -1,0 +1,13 @@
+.bike{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    transition: 0.5s;
+}
+.bike:hover{
+    border: 1px solid black;
+    text-align: center;
+    transform: scale(1.1);
+    transition: 0.5s;
+}

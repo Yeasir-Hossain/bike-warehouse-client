@@ -36,7 +36,7 @@ const SocialLogin = () => {
                 <div style={{ height: '1px' }} className='bg-dark w-50'></div>
             </div>
             {errorElement}
-            <div className=''>
+            <div className='my-2'>
                 <button
                     onClick={() => signInWithGoogle()}
                     className='btn btn-dark mx-auto my-3 w-50 d-block'>
