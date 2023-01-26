@@ -9,7 +9,7 @@ const Update = () => {
     const [product, setProduct] = useState({})
     const [qty, setQty] = useState(0)
     useEffect(() => {
-        fetch(`https://radiant-temple-39327.herokuapp.com/bike/${id}`)
+        fetch(`https://bike-warehouse.onrender.com/bike/${id}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data)
@@ -21,7 +21,7 @@ const Update = () => {
         event.preventDefault()
         const quantity = parseInt(event.target.quantity.value) + parseInt(product.quantity)
         const updateproduct = { quantity }
-        fetch(`https://radiant-temple-39327.herokuapp.com/bike/${id}`, {
+        fetch(`https://bike-warehouse.onrender.com/bike/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -43,7 +43,7 @@ const Update = () => {
         }
         const quantity = parseInt(product.quantity) - 1
         const updateproduct = { quantity }
-        fetch(`https://radiant-temple-39327.herokuapp.com/bike/${id}`, {
+        fetch(`https://bike-warehouse.onrender.com/bike/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

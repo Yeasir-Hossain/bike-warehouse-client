@@ -9,7 +9,7 @@ const Manage = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Please confirm if you want to delete?')
         if (proceed) {
-            fetch(`https://radiant-temple-39327.herokuapp.com/bike/${id}`,{
+            fetch(`https://bike-warehouse.onrender.com/bike/${id}`,{
                 method: 'DELETE'})
             .then(res => res.json())
     .then(data => {

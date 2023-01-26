@@ -14,7 +14,7 @@ const Myitems = () => {
     useEffect(() => {
         const getitems = async () => {
             const email = user?.email;
-            const url = `https://radiant-temple-39327.herokuapp.com/item?email=${email}`
+            const url = `https://bike-warehouse.onrender.com/item?email=${email}`
             try {
                 const { data } = await axiosPrivate.get(url);
                 setitems(data);

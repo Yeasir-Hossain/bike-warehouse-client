@@ -11,7 +11,7 @@ const AddService = () => {
         handleSubmit,
     } = useForm();
     const onSubmit = (data) => {
-        const url = `https://radiant-temple-39327.herokuapp.com/item`;
+        const url = `https://bike-warehouse.onrender.com/item`;
         fetch(url, {
             method: "POST",
             headers: {
